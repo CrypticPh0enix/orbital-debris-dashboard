@@ -1,0 +1,253 @@
+/* =============== BASE STYLES =============== */
+body {
+  background-color: #f5fafd;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+a {
+  color: #17827F;
+}
+
+h3, h4 {
+  font-weight: 600;
+  color: #1F2D3D;
+}
+
+
+/* =============== PLOT CAPTION & SUBTITLES =============== */
+.plot-caption, .card-body p:first-of-type {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 1px;
+  padding-left: 2px;
+}
+.plot-caption {
+  font-size: 13px;
+  margin-bottom: 1px;
+  color: #555;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.plot-caption abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+.zoom-tip {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+
+/* =============== INFO BANNER =============== */
+.info-banner {
+  font-size: 15px;
+  background-color: #e9f7f6;
+  padding: 8px 14px;
+  margin-bottom: 0;
+}
+
+
+/* =============== SLIDER ROW & PLAY BUTTON =============== */
+.slider-row {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-play {
+  background-color: #17827F !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  border: none !important;
+  font-size: 14px !important;
+  padding: 4px 10px !important;
+  height: 32px !important;
+  cursor: pointer;
+}
+
+.custom-play:hover {
+  background-color: #126E6B !important;
+}
+
+
+/* =============== FOOTER NOTE =============== */
+.footer-note {
+  font-size: 11px;
+  line-height: 1.2em;
+  padding: 6px 16px;
+}
+
+
+/* =============== NOTABLE EVENTS SIDEBAR =============== */
+.notable-events {
+  background-color: #d1ffbd;
+  border-left: 4px solid #234f1e;
+  padding: 12px;
+  font-size: 12px;
+}
+
+.notable-events h5 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+
+/* =============== CHECKBOXES AND RADIO BUTTONS =============== */
+.checkbox label, .radio label {
+  font-size: 13px;
+  color: #333;
+  margin-left: 6px;
+}
+
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+}
+
+.sidebar input[type="checkbox"] + label,
+.sidebar input[type="radio"] + label {
+  font-size: 13px;
+}
+
+.orbit-checkbox label {
+  font-size: 13px;
+}
+
+.orbit-checkbox span[title] {
+  cursor: help;
+  color: #17827F;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* =============== SLIDER STYLING =============== */
+.irs-bar, .irs-bar-edge {
+  background-color: #17827F !important;
+}
+
+.irs-single, .irs-min, .irs-max {
+  background: #17827F !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+}
+
+
+/* =============== PLOTLY TOOLTIP CLEANUP =============== */
+
+.plotly-tooltip {
+  border-radius: 4px !important;
+  font-size: 12px !important;
+  background-color: rgba(50, 50, 50, 0.85) !important;
+  color: #fff !important;
+}
+
+
+/* =============== VALIDATION MESSAGES =============== */
+.shiny-output-error,
+.shiny-output-error-validation {
+  color: #b30000;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+#orbitPlotBox:fullscreen {
+  background: white;
+  padding: 10px;
+  z-index: 9999;
+}
+
+#orbitPlotBox:fullscreen .plotly {
+  height: 90vh !important;
+}
+#countryPlotBox:fullscreen {
+  background: white;
+  padding: 10px;
+  z-index: 9999;
+}
+
+#countryPlotBox:fullscreen .plotly {
+  height: 90vh !important;
+}
+#functionPlotBox:fullscreen {
+  background: white;
+  padding: 10px;
+  z-index: 9999;
+}
+
+#functionPlotBox:fullscreen .plotly {
+  height: 90vh !important;
+}
+
+.dashboard-intro {
+  padding: 10px 10px;
+  background-color: #f0f9f9;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-intro h4 {
+  margin-top: 0;
+  font-size: 12px;
+  color: #17827F;
+  font-weight: bold;
+}
+
+.chart-summary {
+  margin-top: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  background-color: #f0f8f8;
+  border-left: 4px solid #17827F;
+  color: #333;
+  border-radius: 4px;
+}
+
+/* =============== RESPONSIVE STYLING =============== */
+@media (max-width: 700px) {
+  .plot-caption {
+    font-size: 13px;
+  }
+
+  .custom-play {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .card-body {
+    padding: 5px;
+  }
+
+  .sidebar .shiny-input-container {
+    overflow-x: auto;
+  }
+}
+
+/* =============== CARD CONTAINER COMPACTNESS =============== */
+.card {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+}
+
+.card-body {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
